@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int n;
+    int count = 0;
+    int c;
 
-    printf("정수 하나를 입력하시오. : ");
-    scanf("%d", &n);
+    printf("input a string: ");
 
-    if (n < 0) {
-        n = -n;
+    while((c = getchar()) != '\n') {
+        if(c >= '0' && c <= '9') {
+            count++;
+        }
     }
-
-    printf("절댓값은 %d입니다.\n", n);
+    
+    printf("The number of digits is: %d\n", count);
 
     return 0;
 }
